@@ -1,0 +1,13 @@
+.Flex {
+  &-row {
+    @extend %flex;
+  }
+}
+
+.--spaceBetween {
+  justify-content: space-between;
+}
+
+.--flexEnd {
+  justify-content: flex-end;
+}

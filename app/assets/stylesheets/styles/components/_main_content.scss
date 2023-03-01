@@ -1,0 +1,17 @@
+.MainContent {
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  min-width: 320px;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+  text-align: center;
+  flex-grow: 999;
+  overflow-y: auto;
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

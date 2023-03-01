@@ -1,0 +1,10 @@
+doctype html
+html lang="en"
+  = render "head"
+  body
+    .MainContent
+      = render "navbar"
+      / = render "flashes"
+      = yield
+      / = render "footer"
+    .FooterBackground
