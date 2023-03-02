@@ -5,6 +5,7 @@ html lang="en"
     .MainContent
       = render "navbar"
       / = render "flashes"
-      = yield
+      .main_body
+        = yield
       / = render "footer"
     .FooterBackground

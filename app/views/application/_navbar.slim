@@ -1,8 +1,11 @@
-header.Flex-row.--flexEnd data-controller="navigation"
-  #menu
-    .menu-link.inlineBlock 
-      = link_to "Home", "/" 
-    .menu-link.inlineBlock 
-      = link_to "Menu", "/menu"
-    .menu-link.inlineBlock  
-      = link_to "Order", "/order"
+header.Flex-row.--spaceBetween.navigation data-controller="navigation"
+  = image_tag 'logo-and-title', class: "nav_img"
+  .toggle-button
+    .stroke
+  / #menu
+  /   .menu-link.inlineBlock 
+  /     = link_to "Home", "/" 
+  /   .menu-link.inlineBlock 
+  /     = link_to "Menu", "/menu"
+  /   .menu-link.inlineBlock  
+  /     = link_to "Order", "/order"

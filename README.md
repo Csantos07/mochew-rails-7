@@ -22,3 +22,13 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+# Commit: 3/2/23
+### Notable Changes
+Used .main_body to add margin to the top
+Added hamburger icon and related animation code
+
+### Next Steps
+Use stimulus to make the dropdown reappear and disapper with the click of the hamburger menu.
+- The hamburger menu should perform its animation
+- The dropdown should have a sliding animation

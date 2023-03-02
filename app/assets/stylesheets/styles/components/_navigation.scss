@@ -2,3 +2,98 @@
   display: inline-block;
   margin: 0.3rem;
 }
+
+.navigation {
+  border-bottom: solid white 1px;
+  position: fixed;
+  width: 100%;
+}
+
+.nav_img {
+  padding-top: .8rem;
+  padding-left: .5rem;
+  width: 9rem;
+}
+
+.toggle-button {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 4rem;
+  width: 4rem;
+  cursor: pointer;
+  transition: all .5s ease-in-out;
+  text-align: left;
+}
+
+.stroke {
+  width: 2rem;
+  height: 0.3rem;
+  background-color: #CCAC58;
+  border-radius: 1rem;
+  // box-shadow: 0 2px 5px rgb(255, 255, 255, .2);
+  transition: all .5s ease-in-out;
+}
+
+.stroke::before,
+.stroke::after {
+  content: '';
+  position: absolute;
+  width: 2rem;
+  height: 0.3rem;
+  background-color: #CCAC58;
+  // box-shadow: 0 2px 5px rgb(255, 255, 255, .2);
+  border-radius: 1rem;
+ }
+
+.stroke::before {
+  transform: translateY(-0.5rem);
+}
+
+.stroke::after {
+  transform: translateY(0.5rem);
+} 
+
+// -----------------------------------
+/* ANIMATION */
+.toggle-button.open .stroke {
+  transform: translateX(-50px);
+  background: transparent;
+  box-shadow: none;
+}
+
+.toggle-button.open .stroke::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.toggle-button.open .stroke::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.dropdown {
+  background-color: rgba(0, 0, 0, 0.342);
+  color: white;
+  width: 100%;
+  position: absolute;
+  text-align: center;
+  visibility: visible;
+  transition: all .9s ease;
+}
+
+.fast {
+  transition: all .5s ease;
+}
+
+.dropdown a {
+  border-bottom: 0.01rem rgba(0, 0, 0, 0.376) solid;
+  padding: 1rem 2rem;
+  font-family: 'Rampart One';
+  font-size: 1.7rem;
+  color: #CCAC58;
+}
+
+.dropdown.hidden {
+  background-color: rgba(0, 0, 0, 0.203);
+  visibility: hidden;
+}

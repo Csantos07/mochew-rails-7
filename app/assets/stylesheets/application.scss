@@ -1,3 +1,15 @@
 @charset "utf-8";
 @import "./styles/variables";
 @import "./styles/components/base";
+
+body {
+  background-color: black;
+  background: no-repeat center center fixed;
+  background-size: cover;
+  background-image: url('cooking-up-mobile.png');
+  margin: 0;
+}
+
+.main_body {
+  margin-top: 4rem;
+}
