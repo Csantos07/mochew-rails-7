@@ -1,11 +1,12 @@
-header.Flex-row.--spaceBetween.navigation data-controller="navigation"
-  = image_tag 'logo-and-title', class: "nav_img"
-  .toggle-button
-    .stroke
-  / #menu
-  /   .menu-link.inlineBlock 
-  /     = link_to "Home", "/" 
-  /   .menu-link.inlineBlock 
-  /     = link_to "Menu", "/menu"
-  /   .menu-link.inlineBlock  
-  /     = link_to "Order", "/order"
+nav data-controller="navigation"
+  header.Flex-row.--spaceBetween.navigation 
+    = image_tag 'logo-and-title', class: "nav_img"
+    .toggle-button data-action="click->navigation#menuToggle" data-navigation-target="toggleButton"
+      .stroke
+  #menu.hidden data-navigation-target="dropDown"
+    .menu-link 
+      = link_to "Home", "/" 
+    .menu-link
+      = link_to "Menu", "/menu"
+    .menu-link  
+      = link_to "Order", "/order"
