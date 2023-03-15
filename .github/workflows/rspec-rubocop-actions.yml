@@ -9,6 +9,11 @@ jobs:
       uses: ruby/setup-ruby@v1
       with:
         ruby-version: 3.2.1
+    - name: Install PostgreSQL client
+      run: sudo apt-get install postgresql-client
+    - name: Create test database
+      run: |
+        psql -c 'create database test_database;' -U postgres -h localhost -p 5432
     - name: Install dependencies
       run: |
         gem install bundler
