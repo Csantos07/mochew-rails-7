@@ -1,12 +1,7 @@
 name: Rails Tests
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  push
 
 env:
   POSTGRES_USER: postgres
