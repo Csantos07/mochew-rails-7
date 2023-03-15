@@ -1,0 +1,21 @@
+name: Ruby Test Suite
+on: push
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Set up Ruby 3.2.1
+      uses: ruby/setup-ruby@v1
+      with:
+        ruby-version: 3.2.1
+    - name: Install dependencies
+      run: |
+        gem install bundler
+        bundle install
+    - name: Run Rubocop
+      run: |
+        bundle exec rubocop
+    - name: Run RSpec
+      run: |
+        bundle exec rspec
