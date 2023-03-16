@@ -1,7 +1,12 @@
 name: "Ruby on Rails CI"
-on: push
+
+on:
+  push:
+    branches:
+      - '*'
 env:
   UBUNTU_VERSION: ubuntu-20.04 # make sure this is set to same version as Heroku
+
 jobs:
   test:
     runs-on: ${{ env.UBUNTU_VERSION }}
