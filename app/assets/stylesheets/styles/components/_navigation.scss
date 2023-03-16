@@ -6,6 +6,7 @@
   border-bottom: solid white 1px;
   position: fixed;
   width: 100%;
+  background-color: black;
 }
 
 .nav_img {
@@ -71,18 +72,14 @@
 }
 
 #menu {
-  background-color: rgba(0, 0, 0, 0.342);
+  background-color: rgba(0, 0, 0, 0.905);
   margin-top: 4rem;
   color: white;
   width: 100%;
   text-align: center;
   visibility: visible;
-  // transition: all .9s ease;
+  position: fixed;
 }
-
-// .fast {
-//   transition: all .5s ease;
-// }
 
 #menu a {
   border-bottom: 0.01rem rgba(0, 0, 0, 0.376) solid;

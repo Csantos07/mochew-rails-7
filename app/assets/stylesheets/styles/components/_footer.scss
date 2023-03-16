@@ -1,0 +1,46 @@
+.footer {
+  width: 100%;
+  background-color: black;
+  border-top: 0.1rem solid white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.social {
+  width: 100%;
+  height: 5rem;
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.youtube {
+  // background-color: red;
+  background-image: url("youtube.png");
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+}
+
+.ig {
+  // background-color: red;
+  background-image: url("ig.png");
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+}
+
+.tiktok {
+  // background-color: red;
+  background-image: url("tiktok.png");
+  background-size: cover;
+  height: 3rem;
+  width: 3rem;
+}
+
+.footer-logo {
+  width: 9rem;
+}

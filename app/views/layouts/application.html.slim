@@ -3,9 +3,9 @@ html lang="en"
   = render "head"
   body
     .MainContent
-      = render "navbar"
+      = render "navbar-plain"
       / = render "flashes"
-      .main_body
-        = yield
-      / = render "footer"
+      / .main-container
+      = yield
+      = render "footer"
     .FooterBackground

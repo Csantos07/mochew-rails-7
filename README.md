@@ -1,3 +1,8 @@
+Let's beautify.
+Add bootstrap if not there already
+
+try and seperate mobile view design from desktop
+try and have different versions of mobile site
 # README
 
 This README would normally document whatever steps are necessary to get the
