@@ -8,18 +8,20 @@ env:
       POSTGRES_PORT: 5432
 jobs:
   # Label of the container job
-  container-job:
+  test:
     # Containers must run in Linux based operating systems
-    runs-on: ubuntu-latest
-    # Docker Hub image that `container-job` executes in
-    container: node:10.18-jessie
+    runs-on: ubuntu-20.04
 
     # Service containers to run with `container-job`
     services:
       # Label used to access the service container
       postgres:
         # Docker Hub image
-        image: postgres
+        image: postgres:14
+        ports: ['5432:5432']
+        env:
+          POSTGRES_USER: ${{ env.POSTGRES_USER }}
+          POSTGRES_PASSWORD: ${{ env.POSTGRES_PASSWORD }}
         # Provide the password for postgres
         # Set health checks to wait until postgres has started
         options: >-
@@ -31,27 +33,16 @@ jobs:
     steps:
       # Downloads a copy of the code in your repository before running CI tests
       - name: Check out repository code
-        uses: actions/checkout@v3
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Set up Ruby 3.2.1
-      uses: ruby/setup-ruby@v1
-      with:
-        ruby-version: 3.2.1
-    - name: Install dependencies
-      run: |
-        gem install bundler
-        bundle install
-    - name: Install PostgreSQL client
-      run: sudo apt-get install postgresql-client
-    - name: Create test database
-      run: |
-        psql -c 'create database test_database;' -U postgres -h localhost -p 5432    
-    - name: Run Rubocop
-      run: |
-        bundle exec rubocop
-    - name: Run RSpec
-      run: |
-        bundle exec rspec
+        uses: actions/checkout@v1
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
+      - name: Run Rubocop
+        run: |
+          bundle exec rubocop
+      - name: Run RSpec
+        run: |
+          bundle exec rails db:prepare
+          bundle exec rails assets:precompile
+          bundle exec rspec
