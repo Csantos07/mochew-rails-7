@@ -4,12 +4,10 @@ on:
   push:
     branches:
       - '*'
-env:
-  UBUNTU_VERSION: ubuntu-20.04 # make sure this is set to same version as Heroku
 
 jobs:
   test:
-    runs-on: ${{ env.UBUNTU_VERSION }}
+    runs-on: ubuntu-20.04 # make sure this is set to same version as Heroku
     services:
       postgres:
         image: postgres:11-alpine
@@ -38,7 +36,7 @@ jobs:
         run: bin/rake
 
   lint:
-    runs-on: ${{ env.UBUNTU_VERSION }}
+    runs-on: ubuntu-20.04 # make sure this is set to same version as Heroku
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
