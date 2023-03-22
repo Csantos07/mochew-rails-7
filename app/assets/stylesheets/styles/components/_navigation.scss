@@ -12,7 +12,7 @@
 .nav_img {
   padding-top: .8rem;
   padding-left: .5rem;
-  width: 9rem;
+  width: 20rem;
 }
 
 .toggle-button {
@@ -25,11 +25,12 @@
   cursor: pointer;
   transition: all .5s ease-in-out;
   text-align: left;
+  margin: 2rem;
 }
 
 .stroke {
-  width: 2rem;
-  height: 0.3rem;
+  width: 4rem;
+  height: 0.6rem;
   background-color: #CCAC58;
   border-radius: 1rem;
   // box-shadow: 0 2px 5px rgb(255, 255, 255, .2);
@@ -40,19 +41,19 @@
 .stroke::after {
   content: '';
   position: absolute;
-  width: 2rem;
-  height: 0.3rem;
+  width: 4rem;
+  height: 0.6rem;
   background-color: #CCAC58;
   // box-shadow: 0 2px 5px rgb(255, 255, 255, .2);
   border-radius: 1rem;
  }
 
 .stroke::before {
-  transform: translateY(-0.5rem);
+  transform: translateY(-0.9rem);
 }
 
 .stroke::after {
-  transform: translateY(0.5rem);
+  transform: translateY(0.9rem);
 } 
 
 // -----------------------------------
@@ -73,7 +74,7 @@
 
 #menu {
   background-color: rgba(0, 0, 0, 0.905);
-  margin-top: 4rem;
+  margin-top: 6rem;
   color: white;
   width: 100%;
   text-align: center;
