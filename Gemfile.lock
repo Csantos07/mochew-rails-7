@@ -72,9 +72,10 @@ GEM
     bindex (0.8.1)
     bootsnap (1.16.0)
       msgpack (~> 1.2)
-    bootstrap-sass (3.4.1)
-      autoprefixer-rails (>= 5.2.1)
-      sassc (>= 2.0.0)
+    bootstrap (5.2.3)
+      autoprefixer-rails (>= 9.1.0)
+      popper_js (>= 2.11.6, < 3)
+      sassc-rails (>= 2.0.0)
     builder (3.2.4)
     concurrent-ruby (1.2.2)
     crass (1.0.6)
@@ -127,6 +128,7 @@ GEM
     parser (3.2.1.1)
       ast (~> 2.4.1)
     pg (1.4.6)
+    popper_js (2.11.6)
     puma (5.6.5)
       nio4r (~> 2.0)
     racc (1.6.2)
@@ -246,12 +248,13 @@ GEM
     zeitwerk (2.6.7)
 
 PLATFORMS
+  x86_64-darwin-20
   x86_64-darwin-22
   x86_64-linux
 
 DEPENDENCIES
   bootsnap
-  bootstrap-sass (~> 3.4.1)
+  bootstrap (~> 5.2, >= 5.2.3)
   debug
   high_voltage
   importmap-rails

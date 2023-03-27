@@ -1,6 +1,6 @@
 .title {
   font-family: "Rampart One";
-  font-size: 8rem;
+  font-size: 4rem;
   color:#CCAC58;
   background-color: black;
 }
@@ -19,6 +19,7 @@
   background-image: url('mochi.jpg');
   // background: no-repeat center center fixed;
   background-size: cover;
+  background-position: center;
   margin-bottom: 2rem;
 }
 
