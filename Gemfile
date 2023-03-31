@@ -6,6 +6,7 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '3.2.1'
 
 gem 'bootsnap', require: false
+gem 'bootstrap', '~> 5.2', '>= 5.2.3'
 gem 'high_voltage'
 gem 'importmap-rails'
 gem 'jbuilder'
